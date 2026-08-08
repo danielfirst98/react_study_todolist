@@ -23,7 +23,7 @@ function App() {
   }
   function ToggleList(targetId) {
     const togglList = todoList.map((list) =>
-      list.id === targetId ? {...list, isDone : !list.isDone} : list
+      list.id === targetId ? { ...list, isDone: !list.isDone } : list,
     );
     setTodoList(togglList);
   }

@@ -22,7 +22,7 @@ function TodoList({ todoList, deleteList, toggleList }) {
                     {list.text}
                   </span>
                   <button type="button" onClick={() => deleteList(list.id)}>
-                    삭제
+                    X
                   </button>
                 </li>
               )

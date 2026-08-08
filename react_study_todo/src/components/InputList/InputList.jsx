@@ -3,8 +3,9 @@ import styles from './InputList.module.css';
 
 function InputList({ addList }) {
   const [input, setInput] = useState('');
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    if(input.trim === '') return
     addList(input);
     setInput('');
   };
@@ -19,6 +20,7 @@ function InputList({ addList }) {
         placeholder="새로운 할 일을 입력하세요!"
         onChange={handleInputChange}
         value={input}
+        onKeyDown={(event) => event.key === 'Enter' ? event.preventDefault() : event}
       />
       <button type="submit">추가</button>
     </form>

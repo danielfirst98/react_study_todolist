@@ -1,6 +1,6 @@
 .todoList {
-    font-size: 16px;
-    &.finish {
-        text-decoration: line-through
-    }
+  font-size: 16px;
+  &.finish {
+    text-decoration: line-through;
+  }
 }
