@@ -18,12 +18,15 @@ function App() {
     };
     setTodoList([...todoList, newTodoList]);
   }
-  console.log(todoList);
+  function DeletList (id) {
+    setTodoList(todoList.filter((list) => list.id !== id))
+  }
+  console.log('출력할 리스트: ', todoList);
   return (
     <>
       <Nav name={name} />
       <InputList addList={AddList} />
-      <TodoList />
+      <TodoList todoList={todoList} deleteList={DeletList}/>
     </>
   );
 }
